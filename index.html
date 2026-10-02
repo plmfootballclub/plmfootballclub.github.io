@@ -1,271 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PLM Football Club ⚽</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<title>PLM Football Club ⚽</title>
 
-    body {
-      background: #f4f7fb;
-      color: #111827;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-    header {
-      background: #0b1f3a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+body{
+  background:#f4f7fb;
+  color:#111827;
+}
 
-    header p {
-      font-size: 15px;
-      opacity: 0.9;
-    }
+/* HEADER */
+header{
+  background:#071b35;
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    nav {
-      background: #12345b;
-      padding: 12px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+.logo{
+  font-size:23px;
+  font-weight:bold;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.logo span{
+  color:#35a7ff;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-size:14px;
+  font-weight:bold;
+}
 
-    .hero {
-      padding: 70px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #0b1f3a, #1d70b8);
-      color: white;
-    }
+nav a:hover{
+  color:#35a7ff;
+}
 
-    .hero h2 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
+/* HERO */
+.hero{
+  min-height:650px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:40px 20px;
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
+  background:
+  linear-gradient(rgba(3,20,40,.78),rgba(3,20,40,.78)),
+  linear-gradient(135deg,#092c52,#0875bd);
+}
 
-    .button {
-      display: inline-block;
-      padding: 13px 25px;
-      background: white;
-      color: #0b1f3a;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
+.hero-content{
+  max-width:800px;
+}
 
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.badge{
+  display:inline-block;
+  padding:8px 18px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:30px;
+  margin-bottom:20px;
+  font-size:13px;
+}
 
-    section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
+.hero h1{
+  font-size:60px;
+  line-height:1.05;
+  margin-bottom:20px;
+}
 
-    .about {
-      text-align: center;
-      line-height: 1.7;
-      font-size: 17px;
-    }
+.hero h1 span{
+  color:#35a7ff;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.hero p{
+  font-size:18px;
+  line-height:1.7;
+  color:#dbeafe;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    }
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 28px;
+  background:#1689df;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #12345b;
-    }
+.btn:hover{
+  background:#0b6fb8;
+}
 
-    .players {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
+/* GENERAL */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
 
-    .player {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    }
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
 
-    .player .number {
-      font-size: 40px;
-      font-weight: bold;
-      color: #1d70b8;
-      margin-bottom: 10px;
-    }
+.section-title small{
+  color:#1689df;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
 
-    .contact {
-      text-align: center;
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-    }
+.section-title h2{
+  font-size:36px;
+  margin-top:8px;
+}
 
-    footer {
-      background: #0b1f3a;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
-    }
+/* ABOUT */
+.about{
+  text-align:center;
+  max-width:800px;
+  margin:auto;
+}
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 30px;
-      }
+.about p{
+  font-size:17px;
+  line-height:1.9;
+  color:#4b5563;
+}
 
-      nav a {
-        margin: 0 6px;
-        font-size: 12px;
-      }
-    }
-  </style>
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:40px;
+}
+
+.info-card{
+  background:white;
+  padding:30px 20px;
+  text-align:center;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.info-card h3{
+  margin-bottom:8px;
+}
+
+/* VALUES */
+.values{
+  background:#071b35;
+  color:white;
+  max-width:none;
+}
+
+.values-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+.values .section-title h2{
+  color:white;
+}
+
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.value-card{
+  background:#0d2b4e;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+}
+
+.value-card h3{
+  margin:15px 0 10px;
+}
+
+.value-card p{
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+/* SQUAD */
+.players{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.player{
+  background:white;
+  border-radius:18px;
+  padding:30px 15px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.player-number{
+  width:65px;
+  height:65px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:#1689df;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.player h3{
+  margin-bottom:7px;
+}
+
+.player p{
+  color:#6b7280;
+  font-size:14px;
+}
+
+/* MATCH */
+.match{
+  background:white;
+  border-radius:20px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+  max-width:700px;
+  margin:auto;
+}
+
+.match-date{
+  color:#1689df;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.match-teams{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:35px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.vs{
+  font-size:14px;
+  color:#6b7280;
+}
+
+/* CONTACT */
+.contact{
+  background:#eaf5ff;
+  max-width:none;
+}
+
+.contact-inner{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.contact-box{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.contact-box p{
+  margin:12px 0;
+  font-size:16px;
+}
+
+/* FOOTER */
+footer{
+  background:#041225;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer p{
+  color:#9ca3af;
+  margin-top:8px;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav a{
+    margin:0 7px;
+    font-size:12px;
+  }
+
+  .hero{
+    min-height:550px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .info-grid,
+  .value-grid{
+    grid-template-columns:1fr;
+  }
+
+  .players{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .match-teams{
+    gap:15px;
+    font-size:18px;
+  }
+}
+
+@media(max-width:450px){
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .players{
+    grid-template-columns:1fr 1fr;
+  }
+
+  section{
+    padding:60px 15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>⚽ PLM FOOTBALL CLUB</h1>
-    <p>Passion • Unity • Football</p>
-  </header>
+<!-- HEADER -->
+<header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero" id="home">
-    <h2>Welcome to PLM Football Club</h2>
-    <p>We play together. We fight together. We grow together.</p>
-    <a class="button" href="#about">Explore Club</a>
+  <div class="logo">
+    ⚽ <span>PLM</span> FOOTBALL CLUB
   </div>
 
-  <section id="about">
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#squad">SQUAD</a>
+    <a href="#matches">MATCHES</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      ⚽ OFFICIAL CLUB WEBSITE
+    </div>
+
+    <h1>
+      PLM <span>FOOTBALL CLUB</span>
+    </h1>
+
+    <p>
+      Passion. Unity. Football.<br>
+      One Team • One Dream • One Family
+    </p>
+
+    <a href="#about" class="btn">
+      EXPLORE OUR CLUB
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="section-title">
+    <small>WHO WE ARE</small>
     <h2>About PLM</h2>
+  </div>
 
-    <div class="about">
+  <div class="about">
+
+    <p>
+      Welcome to the official website of PLM Football Club.
+      We are a football team built on friendship, teamwork,
+      discipline and passion for the beautiful game.
+    </p>
+
+  </div>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <div class="icon">⚽</div>
+      <h3>Football</h3>
+      <p>Playing with passion and determination.</p>
+    </div>
+
+    <div class="info-card">
+      <div class="icon">🤝</div>
+      <h3>Teamwork</h3>
+      <p>Supporting each other on and off the pitch.</p>
+    </div>
+
+    <div class="info-card">
+      <div class="icon">🏆</div>
+      <h3>Our Goal</h3>
+      <p>To grow together and achieve more.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VALUES -->
+<section class="values">
+
+  <div class="values-inner">
+
+    <div class="section-title">
+      <small>OUR VALUES</small>
+      <h2>What PLM Stands For</h2>
+    </div>
+
+    <div class="value-grid">
+
+      <div class="value-card">
+        <div class="icon">🔥</div>
+        <h3>PASSION</h3>
+        <p>
+          We play every match with energy,
+          passion and commitment.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="icon">🤝</div>
+        <h3>UNITY</h3>
+        <p>
+          Together we build a stronger
+          football family.
+        </p>
+      </div>
+
+      <div class="value-card">
+        <div class="icon">💪</div>
+        <h3>DISCIPLINE</h3>
+        <p>
+          Respect, discipline and teamwork
+          guide our journey.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SQUAD -->
+<section id="squad">
+
+  <div class="section-title">
+    <small>THE TEAM</small>
+    <h2>Our Squad</h2>
+  </div>
+
+  <div class="players">
+
+    <div class="player">
+      <div class="player-number">01</div>
+      <h3>Player Name</h3>
+      <p>Player</p>
+    </div>
+
+    <div class="player">
+      <div class="player-number">02</div>
+      <h3>Player Name</h3>
+      <p>Player</p>
+    </div>
+
+    <div class="player">
+      <div class="player-number">03</div>
+      <h3>Player Name</h3>
+      <p>Player</p>
+    </div>
+
+    <div class="player">
+      <div class="player-number">04</div>
+      <h3>Player Name</h3>
+      <p>Player</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MATCHES -->
+<section id="matches">
+
+  <div class="section-title">
+    <small>MATCH CENTER</small>
+    <h2>Upcoming Match</h2>
+  </div>
+
+  <div class="match">
+
+    <div class="match-date">
+      📅 MATCH DETAILS COMING SOON
+    </div>
+
+    <div class="match-teams">
+
+      <span>⚽ PLM FC</span>
+
+      <span class="vs">VS</span>
+
+      <span>OPPONENT</span>
+
+    </div>
+
+    <p style="margin-top:20px;color:#6b7280;">
+      Match information will be updated here.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="contact-inner">
+
+    <div class="section-title">
+      <small>GET IN TOUCH</small>
+      <h2>Contact PLM</h2>
+    </div>
+
+    <div class="contact-box">
+
+      <p>⚽ <strong>PLM Football Club</strong></p>
+
       <p>
-        Welcome to the official website of PLM Football Club.
-        We are a football club built around teamwork, friendship,
-        discipline and love for the beautiful game.
+        📍 Mohora Wasa Colony, Chattogram, Bangladesh
       </p>
+
+      <p>
+        🤝 Football • Friendship • Unity
+      </p>
+
     </div>
-  </section>
 
-  <section>
-    <h2>Our Values</h2>
+  </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>⚽ Teamwork</h3>
-        <p>We believe that a strong team achieves more together.</p>
-      </div>
+</section>
 
-      <div class="card">
-        <h3>🔥 Passion</h3>
-        <p>Every match is played with heart, energy and passion.</p>
-      </div>
 
-      <div class="card">
-        <h3>🤝 Unity</h3>
-        <p>Friendship and unity make our club stronger.</p>
-      </div>
-    </div>
-  </section>
+<!-- FOOTER -->
+<footer>
 
-  <section id="team">
-    <h2>Our Team</h2>
+  <h3>⚽ PLM FOOTBALL CLUB</h3>
 
-    <div class="players">
-      <div class="player">
-        <div class="number">01</div>
-        <h3>Player Name</h3>
-        <p>Goalkeeper</p>
-      </div>
+  <p>
+    Passion • Unity • Football
+  </p>
 
-      <div class="player">
-        <div class="number">07</div>
-        <h3>Player Name</h3>
-        <p>Midfielder</p>
-      </div>
+  <p>
+    © 2026 PLM Football Club. All Rights Reserved.
+  </p>
 
-      <div class="player">
-        <div class="number">10</div>
-        <h3>Player Name</h3>
-        <p>Forward</p>
-      </div>
-
-      <div class="player">
-        <div class="number">11</div>
-        <h3>Player Name</h3>
-        <p>Defender</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact PLM</h2>
-
-    <div class="contact">
-      <p>⚽ PLM Football Club</p>
-      <p>📍 Bangladesh</p>
-      <p>📧 Email: plmfootballclub@gmail.com</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 PLM Football Club. All Rights Reserved.</p>
-    <p>Made with ❤️ for football</p>
-  </footer>
+</footer>
 
 </body>
 </html>
