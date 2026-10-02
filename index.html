@@ -4,45 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PLM Football Club ⚽</title>
+<title>PLM Football Club</title>
 
 <style>
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-  scroll-behavior:smooth;
+  font-family:Arial, sans-serif;
 }
 
 body{
-  background:#f4f7fb;
+  background:#f5f9ff;
   color:#111827;
 }
 
 /* HEADER */
+
 header{
-  background:#071b35;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#041225;
   color:white;
-  padding:18px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:sticky;
-  top:0;
-  z-index:100;
+  padding:18px 7%;
 }
 
 .logo{
-  font-size:23px;
+  font-size:20px;
   font-weight:bold;
 }
 
 .logo span{
-  color:#35a7ff;
+  color:#1689df;
 }
 
 nav a{
@@ -54,10 +52,11 @@ nav a{
 }
 
 nav a:hover{
-  color:#35a7ff;
+  color:#1689df;
 }
 
 /* HERO */
+
 .hero{
   min-height:650px;
   display:flex;
@@ -65,34 +64,34 @@ nav a:hover{
   align-items:center;
   text-align:center;
   color:white;
-  padding:40px 20px;
-
   background:
-  linear-gradient(rgba(3,20,40,.78),rgba(3,20,40,.78)),
-  linear-gradient(135deg,#092c52,#0875bd);
+  linear-gradient(rgba(4,18,37,.75),rgba(4,18,37,.85)),
+  linear-gradient(135deg,#1689df,#041225);
 }
 
 .hero-content{
-  max-width:800px;
+  max-width:850px;
+  padding:20px;
 }
 
 .badge{
   display:inline-block;
   padding:8px 18px;
-  border:1px solid rgba(255,255,255,.4);
+  border:1px solid #1689df;
   border-radius:30px;
-  margin-bottom:20px;
+  color:#dbeafe;
   font-size:13px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:60px;
-  line-height:1.05;
+  font-size:65px;
+  line-height:1.1;
   margin-bottom:20px;
 }
 
 .hero h1 span{
-  color:#35a7ff;
+  color:#1689df;
 }
 
 .hero p{
@@ -117,6 +116,7 @@ nav a:hover{
 }
 
 /* GENERAL */
+
 section{
   max-width:1100px;
   margin:auto;
@@ -141,6 +141,7 @@ section{
 }
 
 /* ABOUT */
+
 .about{
   text-align:center;
   max-width:800px;
@@ -178,6 +179,7 @@ section{
 }
 
 /* VALUES */
+
 .values{
   background:#071b35;
   color:white;
@@ -216,6 +218,7 @@ section{
 }
 
 /* SQUAD */
+
 .players{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -225,9 +228,19 @@ section{
 .player{
   background:white;
   border-radius:18px;
-  padding:30px 15px;
+  padding:25px 15px;
   text-align:center;
   box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.player-photo{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:0 auto 15px;
+  display:block;
+  border:4px solid #1689df;
 }
 
 .player-number{
@@ -253,7 +266,33 @@ section{
   font-size:14px;
 }
 
+/* PLAYER STATS */
+
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:18px;
+}
+
+.stats span{
+  display:flex;
+  flex-direction:column;
+}
+
+.stats strong{
+  font-size:20px;
+  color:#1689df;
+}
+
+.stats small{
+  color:#6b7280;
+  font-size:12px;
+  margin-top:3px;
+}
+
 /* MATCH */
+
 .match{
   background:white;
   border-radius:20px;
@@ -285,6 +324,7 @@ section{
 }
 
 /* CONTACT */
+
 .contact{
   background:#eaf5ff;
   max-width:none;
@@ -309,6 +349,7 @@ section{
 }
 
 /* FOOTER */
+
 footer{
   background:#041225;
   color:white;
@@ -323,6 +364,7 @@ footer p{
 }
 
 /* MOBILE */
+
 @media(max-width:800px){
 
   header{
@@ -371,13 +413,20 @@ footer p{
   section{
     padding:60px 15px;
   }
+
+  .player-photo{
+    width:100px;
+    height:100px;
+  }
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
+
 <header>
 
   <div class="logo">
@@ -396,6 +445,7 @@ footer p{
 
 
 <!-- HERO -->
+
 <section class="hero" id="home">
 
   <div class="hero-content">
@@ -423,6 +473,7 @@ footer p{
 
 
 <!-- ABOUT -->
+
 <section id="about">
 
   <div class="section-title">
@@ -466,6 +517,7 @@ footer p{
 
 
 <!-- VALUES -->
+
 <section class="values">
 
   <div class="values-inner">
@@ -512,6 +564,7 @@ footer p{
 
 
 <!-- SQUAD -->
+
 <section id="squad">
 
   <div class="section-title">
@@ -521,28 +574,99 @@ footer p{
 
   <div class="players">
 
-    <div class="player">
-      <div class="player-number">01</div>
-      <h3>Player Name</h3>
-      <p>Player</p>
-    </div>
+    <!-- SEFAT -->
 
     <div class="player">
-      <div class="player-number">02</div>
-      <h3>Player Name</h3>
-      <p>Player</p>
+
+      <img
+        src="IMG-20260601-WA0000.jpg"
+        alt="Sefat"
+        class="player-photo"
+      >
+
+      <div class="player-number">
+        10
+      </div>
+
+      <h3>
+        Sefat
+      </h3>
+
+      <p>
+        Football Player
+      </p>
+
+      <div class="stats">
+
+        <span>
+          <strong>0</strong>
+          <small>Goals</small>
+        </span>
+
+        <span>
+          <strong>0</strong>
+          <small>Assists</small>
+        </span>
+
+      </div>
+
     </div>
 
-    <div class="player">
-      <div class="player-number">03</div>
-      <h3>Player Name</h3>
-      <p>Player</p>
-    </div>
+
+    <!-- PLAYER 2 -->
 
     <div class="player">
-      <div class="player-number">04</div>
-      <h3>Player Name</h3>
-      <p>Player</p>
+
+      <div class="player-number">
+        02
+      </div>
+
+      <h3>
+        Player Name
+      </h3>
+
+      <p>
+        Player
+      </p>
+
+    </div>
+
+
+    <!-- PLAYER 3 -->
+
+    <div class="player">
+
+      <div class="player-number">
+        03
+      </div>
+
+      <h3>
+        Player Name
+      </h3>
+
+      <p>
+        Player
+      </p>
+
+    </div>
+
+
+    <!-- PLAYER 4 -->
+
+    <div class="player">
+
+      <div class="player-number">
+        04
+      </div>
+
+      <h3>
+        Player Name
+      </h3>
+
+      <p>
+        Player
+      </p>
+
     </div>
 
   </div>
@@ -551,6 +675,7 @@ footer p{
 
 
 <!-- MATCHES -->
+
 <section id="matches">
 
   <div class="section-title">
@@ -568,9 +693,13 @@ footer p{
 
       <span>⚽ PLM FC</span>
 
-      <span class="vs">VS</span>
+      <span class="vs">
+        VS
+      </span>
 
-      <span>OPPONENT</span>
+      <span>
+        OPPONENT
+      </span>
 
     </div>
 
@@ -584,6 +713,7 @@ footer p{
 
 
 <!-- CONTACT -->
+
 <section class="contact" id="contact">
 
   <div class="contact-inner">
@@ -595,7 +725,9 @@ footer p{
 
     <div class="contact-box">
 
-      <p>⚽ <strong>PLM Football Club</strong></p>
+      <p>
+        ⚽ <strong>PLM Football Club</strong>
+      </p>
 
       <p>
         📍 Mohora Wasa Colony, Chattogram, Bangladesh
@@ -613,9 +745,12 @@ footer p{
 
 
 <!-- FOOTER -->
+
 <footer>
 
-  <h3>⚽ PLM FOOTBALL CLUB</h3>
+  <h3>
+    ⚽ PLM FOOTBALL CLUB
+  </h3>
 
   <p>
     Passion • Unity • Football
