@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PLM Football Club</title>
 
 <style>
@@ -11,7 +10,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
@@ -207,8 +206,6 @@ footer{
     padding:25px;
 }
 
-/* MODAL */
-
 .modal{
     display:none;
     position:fixed;
@@ -276,8 +273,6 @@ footer{
     color:#1266a8;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
     .players{
         grid-template-columns:repeat(2,1fr);
@@ -323,8 +318,6 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-
 <header>
     <div class="logo">⚽ PLM FOOTBALL CLUB</div>
 
@@ -336,23 +329,14 @@ footer{
     </nav>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero" id="home">
     <div>
         <h1>PLM FOOTBALL CLUB</h1>
-
         <p>Passion • Unity • Football</p>
-
         <p>One Team • One Dream • One Family</p>
-
         <a href="#squad" class="btn">View Squad</a>
     </div>
 </section>
-
-
-<!-- ABOUT -->
 
 <section id="about">
 
@@ -385,11 +369,7 @@ footer{
         </div>
 
     </div>
-
 </section>
-
-
-<!-- SQUAD -->
 
 <section class="squad" id="squad">
 
@@ -397,24 +377,19 @@ footer{
 
     <div class="players">
 
-
         <!-- BIJOY -->
 
-        <div class="player-card" onclick="openBijoyProfile()">
+        <div class="player-card" onclick="openProfile('bijoyModal')">
 
-            <img src="Gemini_Generated_Image_joc2zjoc2zjoc2zj.jpeg"
-                 alt="Bijoy">
+            <img src="Gemini_Generated_Image_joc2zjoc2zjoc2zj.jpeg" alt="Bijoy">
 
             <div class="jersey">Jersey #31</div>
 
             <h3>Bijoy</h3>
 
-            <div class="position">
-                Football Player
-            </div>
+            <div class="position">Football Player</div>
 
             <div class="stats">
-
                 <div>
                     <strong>0</strong>
                     <span>Goals</span>
@@ -424,33 +399,25 @@ footer{
                     <strong>0</strong>
                     <span>Assists</span>
                 </div>
-
             </div>
 
-            <div class="click-text">
-                CLICK TO VIEW PROFILE
-            </div>
+            <div class="click-text">CLICK TO VIEW PROFILE</div>
 
         </div>
 
-
         <!-- SEFAT -->
 
-        <div class="player-card" onclick="openSefatProfile()">
+        <div class="player-card" onclick="openProfile('sefatModal')">
 
-            <img src="IMG-20260601-WA0000.jpg"
-                 alt="Sefat">
+            <img src="IMG-20260601-WA0000.jpg" alt="Sefat">
 
             <div class="jersey">Jersey #10</div>
 
             <h3>Sefat</h3>
 
-            <div class="position">
-                Football Player
-            </div>
+            <div class="position">Football Player</div>
 
             <div class="stats">
-
                 <div>
                     <strong>0</strong>
                     <span>Goals</span>
@@ -460,33 +427,25 @@ footer{
                     <strong>0</strong>
                     <span>Assists</span>
                 </div>
-
             </div>
 
-            <div class="click-text">
-                CLICK TO VIEW PROFILE
-            </div>
+            <div class="click-text">CLICK TO VIEW PROFILE</div>
 
         </div>
 
-
         <!-- JOY -->
 
-        <div class="player-card" onclick="openJoyProfile()">
+        <div class="player-card" onclick="openProfile('joyModal')">
 
-            <img src="1791035624550.jpg"
-                 alt="Joy">
+            <img src="1791035624550.jpg" alt="Joy">
 
             <div class="jersey">Jersey #11</div>
 
             <h3>Joy</h3>
 
-            <div class="position">
-                Football Player
-            </div>
+            <div class="position">Football Player</div>
 
             <div class="stats">
-
                 <div>
                     <strong>0</strong>
                     <span>Goals</span>
@@ -496,33 +455,25 @@ footer{
                     <strong>0</strong>
                     <span>Assists</span>
                 </div>
-
             </div>
 
-            <div class="click-text">
-                CLICK TO VIEW PROFILE
-            </div>
+            <div class="click-text">CLICK TO VIEW PROFILE</div>
 
         </div>
 
-
         <!-- SEIAM -->
 
-        <div class="player-card" onclick="openSeiamProfile()">
+        <div class="player-card" onclick="openProfile('seiamModal')">
 
-            <img src="Gemini_Generated_Image_ji51znji51znji51.jpeg"
-                 alt="Seiam">
+            <img src="Gemini_Generated_Image_ji51znji51znji51.jpeg" alt="Seiam">
 
             <div class="jersey">Jersey #06</div>
 
             <h3>Seiam</h3>
 
-            <div class="position">
-                Football Player
-            </div>
+            <div class="position">Football Player</div>
 
             <div class="stats">
-
                 <div>
                     <strong>0</strong>
                     <span>Goals</span>
@@ -532,15 +483,11 @@ footer{
                     <strong>0</strong>
                     <span>Assists</span>
                 </div>
-
             </div>
 
-            <div class="click-text">
-                CLICK TO VIEW PROFILE
-            </div>
+            <div class="click-text">CLICK TO VIEW PROFILE</div>
 
         </div>
-
 
         <!-- PLAYER 4 -->
 
@@ -556,20 +503,15 @@ footer{
                 justify-content:center;
                 margin:0 auto 12px;
                 font-size:55px;
-            ">
-                ⚽
-            </div>
+            ">⚽</div>
 
             <div class="jersey">Jersey #04</div>
 
             <h3>Player Name</h3>
 
-            <div class="position">
-                Football Player
-            </div>
+            <div class="position">Football Player</div>
 
             <div class="stats">
-
                 <div>
                     <strong>0</strong>
                     <span>Goals</span>
@@ -579,36 +521,26 @@ footer{
                     <strong>0</strong>
                     <span>Assists</span>
                 </div>
-
             </div>
 
         </div>
 
     </div>
-
 </section>
-
-
-<!-- UPCOMING MATCH -->
 
 <section>
 
     <h2 class="section-title">Upcoming Match</h2>
 
     <div class="match-box">
-
         <h2>PLM FC 🆚 Opponent</h2>
 
         <p style="margin-top:15px;">
             Match details will be updated soon.
         </p>
-
     </div>
 
 </section>
-
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -616,14 +548,9 @@ footer{
 
     <p>📍 Mohora Wasa Colony, Chattogram, Bangladesh</p>
 
-    <p style="margin-top:10px;">
-        ⚽ PLM Football Club
-    </p>
+    <p style="margin-top:10px;">⚽ PLM Football Club</p>
 
 </section>
-
-
-<!-- FOOTER -->
 
 <footer>
     <p>© 2026 PLM Football Club. All Rights Reserved.</p>
@@ -636,63 +563,27 @@ footer{
 
     <div class="modal-content">
 
-        <span class="close" onclick="closeBijoyProfile()">×</span>
+        <span class="close" onclick="closeProfile('bijoyModal')">×</span>
 
-        <img src="Gemini_Generated_Image_joc2zjoc2zjoc2zj.jpeg"
-             alt="Bijoy">
+        <img src="Gemini_Generated_Image_joc2zjoc2zjoc2zj.jpeg" alt="Bijoy">
 
         <h2>Bijoy</h2>
 
-        <p style="color:#777;margin-top:5px;">
-            Football Player
-        </p>
+        <p style="color:#777;margin-top:5px;">Football Player</p>
 
         <div class="profile-info">
 
-            <p>
-                <strong>Full Name:</strong>
-                Jahid Hasan Bijoy
-            </p>
-
-            <p>
-                <strong>Age:</strong>
-                22
-            </p>
-
-            <p>
-                <strong>Position:</strong>
-                LWF
-            </p>
-
-            <p>
-                <strong>Jersey Number:</strong>
-                31
-            </p>
-
-            <p>
-                <strong>Goals:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Assists:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Achievement:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Trophies:</strong>
-                0
-            </p>
+            <p><strong>Full Name:</strong> Jahid Hasan Bijoy</p>
+            <p><strong>Age:</strong> 22</p>
+            <p><strong>Position:</strong> LWF</p>
+            <p><strong>Jersey Number:</strong> 31</p>
+            <p><strong>Matches Played:</strong> 0</p>
+            <p><strong>Achievement:</strong> 0</p>
+            <p><strong>Trophies:</strong> 0</p>
 
         </div>
 
     </div>
-
 </div>
 
 
@@ -702,63 +593,27 @@ footer{
 
     <div class="modal-content">
 
-        <span class="close" onclick="closeSefatProfile()">×</span>
+        <span class="close" onclick="closeProfile('sefatModal')">×</span>
 
-        <img src="IMG-20260601-WA0000.jpg"
-             alt="Sefat">
+        <img src="IMG-20260601-WA0000.jpg" alt="Sefat">
 
         <h2>Sefat</h2>
 
-        <p style="color:#777;margin-top:5px;">
-            Football Player
-        </p>
+        <p style="color:#777;margin-top:5px;">Football Player</p>
 
         <div class="profile-info">
 
-            <p>
-                <strong>Full Name:</strong>
-                Ibna Sayed Sefat Ahmed
-            </p>
-
-            <p>
-                <strong>Age:</strong>
-                17
-            </p>
-
-            <p>
-                <strong>Position:</strong>
-                DMF
-            </p>
-
-            <p>
-                <strong>Jersey Number:</strong>
-                10
-            </p>
-
-            <p>
-                <strong>Goals:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Assists:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Achievement:</strong>
-                1× Top Goal Scorer
-            </p>
-
-            <p>
-                <strong>Trophies:</strong>
-                0
-            </p>
+            <p><strong>Full Name:</strong> Ibna Sayed Sefat Ahmed</p>
+            <p><strong>Age:</strong> 17</p>
+            <p><strong>Position:</strong> DMF</p>
+            <p><strong>Jersey Number:</strong> 10</p>
+            <p><strong>Matches Played:</strong> 0</p>
+            <p><strong>Achievement:</strong> 1× Top Goal Scorer</p>
+            <p><strong>Trophies:</strong> 0</p>
 
         </div>
 
     </div>
-
 </div>
 
 
@@ -768,63 +623,27 @@ footer{
 
     <div class="modal-content">
 
-        <span class="close" onclick="closeJoyProfile()">×</span>
+        <span class="close" onclick="closeProfile('joyModal')">×</span>
 
-        <img src="1791035624550.jpg"
-             alt="Joy">
+        <img src="1791035624550.jpg" alt="Joy">
 
         <h2>Joy</h2>
 
-        <p style="color:#777;margin-top:5px;">
-            Football Player
-        </p>
+        <p style="color:#777;margin-top:5px;">Football Player</p>
 
         <div class="profile-info">
 
-            <p>
-                <strong>Full Name:</strong>
-                Rashedul Alam Joy
-            </p>
-
-            <p>
-                <strong>Age:</strong>
-                28
-            </p>
-
-            <p>
-                <strong>Position:</strong>
-                AMF
-            </p>
-
-            <p>
-                <strong>Jersey Number:</strong>
-                11
-            </p>
-
-            <p>
-                <strong>Goals:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Assists:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Achievement:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Trophies:</strong>
-                0
-            </p>
+            <p><strong>Full Name:</strong> Rashedul Alam Joy</p>
+            <p><strong>Age:</strong> 28</p>
+            <p><strong>Position:</strong> AMF</p>
+            <p><strong>Jersey Number:</strong> 11</p>
+            <p><strong>Matches Played:</strong> 0</p>
+            <p><strong>Achievement:</strong> 0</p>
+            <p><strong>Trophies:</strong> 0</p>
 
         </div>
 
     </div>
-
 </div>
 
 
@@ -834,145 +653,59 @@ footer{
 
     <div class="modal-content">
 
-        <span class="close" onclick="closeSeiamProfile()">×</span>
+        <span class="close" onclick="closeProfile('seiamModal')">×</span>
 
-        <img src="Gemini_Generated_Image_ji51znji51znji51.jpeg"
-             alt="Seiam">
+        <img src="Gemini_Generated_Image_ji51znji51znji51.jpeg" alt="Seiam">
 
         <h2>Seiam</h2>
 
-        <p style="color:#777;margin-top:5px;">
-            Football Player
-        </p>
+        <p style="color:#777;margin-top:5px;">Football Player</p>
 
         <div class="profile-info">
 
-            <p>
-                <strong>Full Name:</strong>
-                Seiam Ahmed
-            </p>
-
-            <p>
-                <strong>Age:</strong>
-                22
-            </p>
-
-            <p>
-                <strong>Position:</strong>
-                CB
-            </p>
-
-            <p>
-                <strong>Jersey Number:</strong>
-                06
-            </p>
-
-            <p>
-                <strong>Goals:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Assists:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Achievement:</strong>
-                0
-            </p>
-
-            <p>
-                <strong>Trophies:</strong>
-                0
-            </p>
+            <p><strong>Full Name:</strong> Seiam Ahmed</p>
+            <p><strong>Age:</strong> 22</p>
+            <p><strong>Position:</strong> CB</p>
+            <p><strong>Jersey Number:</strong> 06</p>
+            <p><strong>Matches Played:</strong> 0</p>
+            <p><strong>Achievement:</strong> 0</p>
+            <p><strong>Trophies:</strong> 0</p>
 
         </div>
 
     </div>
-
 </div>
 
 
 <script>
 
-/* BIJOY */
-
-function openBijoyProfile(){
-    document.getElementById("bijoyModal").style.display="flex";
+function openProfile(id){
+    document.getElementById(id).style.display="flex";
 }
 
-function closeBijoyProfile(){
-    document.getElementById("bijoyModal").style.display="none";
+function closeProfile(id){
+    document.getElementById(id).style.display="none";
 }
-
-
-/* SEFAT */
-
-function openSefatProfile(){
-    document.getElementById("sefatModal").style.display="flex";
-}
-
-function closeSefatProfile(){
-    document.getElementById("sefatModal").style.display="none";
-}
-
-
-/* JOY */
-
-function openJoyProfile(){
-    document.getElementById("joyModal").style.display="flex";
-}
-
-function closeJoyProfile(){
-    document.getElementById("joyModal").style.display="none";
-}
-
-
-/* SEIAM */
-
-function openSeiamProfile(){
-    document.getElementById("seiamModal").style.display="flex";
-}
-
-function closeSeiamProfile(){
-    document.getElementById("seiamModal").style.display="none";
-}
-
-
-/* CLICK OUTSIDE MODAL */
 
 window.onclick=function(event){
 
-    if(event.target === document.getElementById("bijoyModal")){
-        closeBijoyProfile();
-    }
+    document.querySelectorAll(".modal").forEach(function(modal){
 
-    if(event.target === document.getElementById("sefatModal")){
-        closeSefatProfile();
-    }
+        if(event.target === modal){
+            modal.style.display="none";
+        }
 
-    if(event.target === document.getElementById("joyModal")){
-        closeJoyProfile();
-    }
-
-    if(event.target === document.getElementById("seiamModal")){
-        closeSeiamProfile();
-    }
+    });
 
 };
-
-
-/* ESCAPE KEY */
 
 document.addEventListener("keydown",function(event){
 
     if(event.key==="Escape"){
 
-        closeBijoyProfile();
-        closeSefatProfile();
-        closeJoyProfile();
-        closeSeiamProfile();
+        document.querySelectorAll(".modal").forEach(function(modal){
+            modal.style.display="none";
+        });
 
     }
 
