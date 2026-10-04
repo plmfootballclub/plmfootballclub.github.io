@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -620,16 +621,16 @@ CLICK TO VIEW PROFILE
 
 <!-- PLAYER 2 - JOY -->
 
-<div class="player">
+<div class="player" onclick="openJoyProfile()">
 
 <img
 src="1791035624550.jpg"
-alt="Joy"
+alt="Rashedul Alam Joy"
 class="player-photo"
 >
 
 <div class="player-number">
-02
+11
 </div>
 
 <h3>
@@ -668,6 +669,11 @@ Assists
 
 </span>
 
+</div>
+
+
+<div class="click-text">
+CLICK TO VIEW PROFILE
 </div>
 
 </div>
@@ -842,9 +848,7 @@ Passion • Unity • Football
 
 <div class="modal" id="profileModal">
 
-
 <div class="profile">
-
 
 <span class="close" onclick="closeProfile()">
 ×
@@ -853,23 +857,19 @@ Passion • Unity • Football
 
 <div class="profile-top">
 
-
 <img
 src="IMG-20260601-WA0000.jpg"
 alt="Ibna Sayed Sefat Ahmed"
 class="profile-photo"
 >
 
-
 <h2>
 Ibna Sayed Sefat Ahmed
 </h2>
 
-
 <p>
 PLM Football Club • Player #10
 </p>
-
 
 </div>
 
@@ -962,9 +962,129 @@ Trophies
 </div>
 
 
+<!-- JOY PROFILE -->
+
+<div class="modal" id="joyProfileModal">
+
+<div class="profile">
+
+<span class="close" onclick="closeJoyProfile()">
+×
+</span>
+
+
+<div class="profile-top">
+
+<img
+src="1791035624550.jpg"
+alt="Rashedul Alam Joy"
+class="profile-photo"
+>
+
+<h2>
+Rashedul Alam Joy
+</h2>
+
+<p>
+PLM Football Club • Player #11
+</p>
+
+</div>
+
+
+<div class="profile-info">
+
+
+<div class="info-row">
+
+<span class="info-label">
+Full Name
+</span>
+
+<span class="info-value">
+Rashedul Alam Joy
+</span>
+
+</div>
+
+
+<div class="info-row">
+
+<span class="info-label">
+Jersey Number
+</span>
+
+<span class="info-value">
+#11
+</span>
+
+</div>
+
+
+<div class="info-row">
+
+<span class="info-label">
+Age
+</span>
+
+<span class="info-value">
+28
+</span>
+
+</div>
+
+
+<div class="info-row">
+
+<span class="info-label">
+Position
+</span>
+
+<span class="info-value">
+AMF
+</span>
+
+</div>
+
+
+<div class="info-row">
+
+<span class="info-label">
+Achievement
+</span>
+
+<span class="info-value">
+0
+</span>
+
+</div>
+
+
+<div class="info-row">
+
+<span class="info-label">
+Trophies
+</span>
+
+<span class="info-value">
+0
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
 <!-- JAVASCRIPT -->
 
 <script>
+
+/* SEFAT PROFILE */
 
 function openProfile(){
 
@@ -984,24 +1104,60 @@ document.body.style.overflow="auto";
 }
 
 
+/* JOY PROFILE */
+
+function openJoyProfile(){
+
+document.getElementById("joyProfileModal").style.display="block";
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeJoyProfile(){
+
+document.getElementById("joyProfileModal").style.display="none";
+
+document.body.style.overflow="auto";
+
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
 window.onclick=function(event){
 
-let modal=document.getElementById("profileModal");
+let sefatModal=document.getElementById("profileModal");
 
-if(event.target === modal){
+let joyModal=document.getElementById("joyProfileModal");
+
+
+if(event.target === sefatModal){
 
 closeProfile();
+
+}
+
+
+if(event.target === joyModal){
+
+closeJoyProfile();
 
 }
 
 };
 
 
+/* ESC KEY */
+
 document.addEventListener("keydown",function(event){
 
 if(event.key==="Escape"){
 
 closeProfile();
+
+closeJoyProfile();
 
 }
 
