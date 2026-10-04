@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PLM Football Club | Official Website</title>
-
-<meta name="description" content="Official website of PLM Football Club, Mohora Wasa Colony, Chattogram, Bangladesh.">
+<title>PLM Football Club</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f5f8fc;
+    background:#f4f7fb;
     color:#172033;
 }
 
-/* HEADER */
-
 header{
-    background:#071a33;
+    background:#07152f;
     color:white;
     padding:18px 7%;
     display:flex;
@@ -40,69 +29,61 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
 .logo{
-    font-size:24px;
-    font-weight:800;
-    letter-spacing:1px;
+    font-size:22px;
+    font-weight:bold;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
-    font-weight:600;
+    margin-left:22px;
+    font-size:15px;
 }
-
-nav a:hover{
-    color:#4da6ff;
-}
-
-/* HERO */
 
 .hero{
-    min-height:560px;
-    background:linear-gradient(135deg,#071a33,#0d4f8b);
-    color:white;
+    min-height:500px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
+    color:white;
+    background:linear-gradient(135deg,#061b42,#1266a8,#16a085);
+    padding:40px 20px;
 }
 
 .hero h1{
-    font-size:58px;
+    font-size:48px;
     margin-bottom:15px;
 }
 
 .hero p{
     font-size:20px;
-    opacity:.9;
+    margin:8px 0;
 }
 
-.tagline{
-    margin-top:18px;
-    font-size:17px;
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 28px;
+    background:white;
+    color:#07152f;
+    border-radius:30px;
+    text-decoration:none;
     font-weight:bold;
 }
 
-/* SECTIONS */
-
 section{
-    padding:80px 7%;
+    padding:70px 7%;
 }
 
 .section-title{
     text-align:center;
-    font-size:36px;
-    margin-bottom:45px;
-    color:#071a33;
+    font-size:32px;
+    margin-bottom:35px;
 }
-
-/* ABOUT */
 
 .about{
     max-width:900px;
@@ -115,24 +96,25 @@ section{
 .values{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:45px;
+    gap:20px;
+    margin-top:40px;
 }
 
 .value-box{
     background:white;
     padding:30px;
-    border-radius:15px;
+    border-radius:18px;
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .value-box h3{
     margin-bottom:10px;
-    color:#0d4f8b;
 }
 
-/* SQUAD */
+.squad{
+    background:#eef3f8;
+}
 
 .players{
     display:grid;
@@ -140,127 +122,92 @@ section{
     gap:22px;
 }
 
-.player{
+.player-card{
     background:white;
-    border-radius:18px;
-    padding:25px 18px;
+    border-radius:20px;
+    padding:20px;
     text-align:center;
-    box-shadow:0 6px 22px rgba(0,0,0,.1);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
     cursor:pointer;
-    transition:.3s;
-    position:relative;
-    overflow:hidden;
+    transition:.25s;
 }
 
-.player:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 28px rgba(0,0,0,.16);
+.player-card:hover{
+    transform:translateY(-7px);
 }
 
-.player-photo{
-    width:120px;
-    height:120px;
+.player-card img{
+    width:145px;
+    height:145px;
     object-fit:cover;
     border-radius:50%;
-    border:4px solid #0d4f8b;
-    margin-bottom:15px;
+    border:5px solid #e5edf5;
+    margin-bottom:12px;
 }
 
-.player-number{
-    font-size:27px;
-    font-weight:800;
-    color:#0d4f8b;
-    margin-bottom:7px;
+.jersey{
+    font-size:15px;
+    font-weight:bold;
+    color:#1266a8;
+    margin-bottom:5px;
 }
 
-.player h3{
+.player-card h3{
     font-size:23px;
     margin-bottom:5px;
 }
 
-.player p{
-    color:#667085;
-    margin-bottom:18px;
+.position{
+    color:#777;
+    margin-bottom:15px;
 }
 
 .stats{
     display:flex;
     justify-content:center;
-    gap:35px;
-    border-top:1px solid #e5e7eb;
-    padding-top:15px;
-}
-
-.stats span{
-    display:flex;
-    flex-direction:column;
+    gap:30px;
+    margin:15px 0;
 }
 
 .stats strong{
-    font-size:22px;
-    color:#0d4f8b;
+    display:block;
+    font-size:20px;
 }
 
-.stats small{
-    color:#667085;
-    margin-top:3px;
+.stats span{
+    font-size:12px;
+    color:#777;
 }
 
 .click-text{
-    font-size:12px;
-    color:#0d4f8b;
     margin-top:15px;
+    color:#1266a8;
+    font-size:12px;
     font-weight:bold;
 }
-
-/* MATCH */
 
 .match-box{
     max-width:700px;
     margin:auto;
     background:white;
     padding:35px;
-    border-radius:18px;
+    border-radius:20px;
     text-align:center;
-    box-shadow:0 6px 22px rgba(0,0,0,.1);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
-
-.match-box h3{
-    font-size:25px;
-    margin-bottom:12px;
-}
-
-.match-box p{
-    color:#667085;
-    margin:7px 0;
-}
-
-/* CONTACT */
 
 .contact{
-    background:#071a33;
-    color:white;
     text-align:center;
 }
-
-.contact .section-title{
-    color:white;
-}
-
-.contact p{
-    margin:10px 0;
-}
-
-/* FOOTER */
 
 footer{
-    background:#041020;
-    color:#aaa;
+    background:#07152f;
+    color:white;
     text-align:center;
-    padding:22px;
+    padding:25px;
 }
 
-/* PROFILE MODAL */
+/* MODAL */
 
 .modal{
     display:none;
@@ -271,100 +218,67 @@ footer{
     width:100%;
     height:100%;
     background:rgba(0,0,0,.75);
-    padding:30px 15px;
-    overflow:auto;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
 
-.profile{
+.modal-content{
     background:white;
-    max-width:650px;
-    margin:40px auto;
+    width:100%;
+    max-width:450px;
     border-radius:22px;
-    overflow:hidden;
+    padding:30px;
+    text-align:center;
     position:relative;
-    animation:profileOpen .3s ease;
+    animation:pop .25s ease;
 }
 
-@keyframes profileOpen{
-
+@keyframes pop{
     from{
-        transform:scale(.85);
+        transform:scale(.8);
         opacity:0;
     }
-
     to{
         transform:scale(1);
         opacity:1;
     }
-
 }
 
-.profile-top{
-    background:linear-gradient(135deg,#071a33,#0d4f8b);
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-.profile-photo{
-    width:155px;
-    height:155px;
+.modal-content img{
+    width:150px;
+    height:150px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid white;
-    margin-bottom:18px;
-}
-
-.profile-top h2{
-    font-size:30px;
-    margin-bottom:7px;
-}
-
-.profile-top p{
-    opacity:.9;
+    border:5px solid #e5edf5;
+    margin-bottom:15px;
 }
 
 .close{
     position:absolute;
     right:20px;
-    top:15px;
-    font-size:32px;
-    color:white;
+    top:12px;
+    font-size:30px;
     cursor:pointer;
-    z-index:10;
 }
 
 .profile-info{
-    padding:30px;
+    text-align:left;
+    margin-top:20px;
 }
 
-.info-row{
-    display:flex;
-    justify-content:space-between;
-    padding:16px 5px;
-    border-bottom:1px solid #e5e7eb;
-    gap:20px;
+.profile-info p{
+    padding:9px 0;
+    border-bottom:1px solid #eee;
 }
 
-.info-row:last-child{
-    border-bottom:none;
-}
-
-.info-label{
-    font-weight:bold;
-    color:#475467;
-}
-
-.info-value{
-    font-weight:600;
-    color:#071a33;
-    text-align:right;
+.profile-info strong{
+    color:#1266a8;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
-
     .players{
         grid-template-columns:repeat(2,1fr);
     }
@@ -372,112 +286,69 @@ footer{
     .values{
         grid-template-columns:1fr;
     }
-
-    .hero h1{
-        font-size:42px;
-    }
-
 }
 
 @media(max-width:600px){
-
     header{
         padding:15px 5%;
-        flex-direction:column;
-        gap:12px;
+    }
+
+    .logo{
+        font-size:17px;
     }
 
     nav a{
-        margin:0 7px;
-        font-size:14px;
+        margin-left:9px;
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
     }
 
     section{
-        padding:60px 5%;
-    }
-
-    .section-title{
-        font-size:30px;
+        padding:50px 5%;
     }
 
     .players{
         grid-template-columns:1fr;
     }
-
-    .hero{
-        min-height:480px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    .profile{
-        margin:20px auto;
-    }
-
-    .profile-top h2{
-        font-size:24px;
-    }
-
-    .info-row{
-        flex-direction:column;
-        gap:5px;
-    }
-
-    .info-value{
-        text-align:left;
-    }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-
 <!-- HEADER -->
 
 <header>
+    <div class="logo">⚽ PLM FOOTBALL CLUB</div>
 
-<div class="logo">
-⚽ PLM FOOTBALL CLUB
-</div>
-
-<nav>
-
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#squad">Squad</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#squad">Squad</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 
 <!-- HERO -->
 
 <section class="hero" id="home">
+    <div>
+        <h1>PLM FOOTBALL CLUB</h1>
 
-<div>
+        <p>Passion • Unity • Football</p>
 
-<h1>PLM FOOTBALL CLUB</h1>
+        <p>One Team • One Dream • One Family</p>
 
-<p>Passion • Unity • Football</p>
-
-<div class="tagline">
-One Team • One Dream • One Family
-</div>
-
-</div>
-
+        <a href="#squad" class="btn">View Squad</a>
+    </div>
 </section>
 
 
@@ -485,264 +356,235 @@ One Team • One Dream • One Family
 
 <section id="about">
 
-<h2 class="section-title">
-About PLM
-</h2>
+    <h2 class="section-title">About PLM</h2>
 
-<div class="about">
+    <div class="about">
+        <p>
+            PLM Football Club is a passionate football family based in
+            Mohora Wasa Colony, Chattogram, Bangladesh.
+            Our goal is to build teamwork, friendship, discipline and
+            a strong football community.
+        </p>
+    </div>
 
-<p>
-Welcome to the official website of PLM Football Club.
-PLM is a football club based in Mohora Wasa Colony,
-Chattogram, Bangladesh.
-</p>
+    <div class="values">
 
-<p>
-Our goal is to build a strong football community through
-teamwork, discipline, passion and unity.
-</p>
+        <div class="value-box">
+            <h3>⚽ Passion</h3>
+            <p>We play football with passion and dedication.</p>
+        </div>
 
-</div>
+        <div class="value-box">
+            <h3>🤝 Unity</h3>
+            <p>We believe teamwork makes us stronger.</p>
+        </div>
 
+        <div class="value-box">
+            <h3>🏆 Football</h3>
+            <p>Football brings our team and community together.</p>
+        </div>
 
-<div class="values">
-
-<div class="value-box">
-
-<h3>⚽ Passion</h3>
-
-<p>
-We play football with passion and dedication.
-</p>
-
-</div>
-
-
-<div class="value-box">
-
-<h3>🤝 Unity</h3>
-
-<p>
-We believe teamwork makes a stronger team.
-</p>
-
-</div>
-
-
-<div class="value-box">
-
-<h3>🏆 Ambition</h3>
-
-<p>
-We always work hard to achieve our goals.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
 <!-- SQUAD -->
 
-<section id="squad">
+<section class="squad" id="squad">
 
-<h2 class="section-title">
-Our Squad
-</h2>
+    <h2 class="section-title">Our Squad</h2>
 
+    <div class="players">
 
-<div class="players">
 
+        <!-- BIJOY -->
 
-<!-- PLAYER 1 - SEFAT -->
+        <div class="player-card" onclick="openBijoyProfile()">
 
-<div class="player" onclick="openProfile()">
+            <img src="Gemini_Generated_Image_joc2zjoc2zjoc2zj.jpeg"
+                 alt="Bijoy">
 
-<img
-src="IMG-20260601-WA0000.jpg"
-alt="Sefat"
-class="player-photo"
->
+            <div class="jersey">Jersey #31</div>
 
-<div class="player-number">
-10
-</div>
+            <h3>Bijoy</h3>
 
-<h3>
-Sefat
-</h3>
+            <div class="position">
+                Football Player
+            </div>
 
-<p>
-Football Player
-</p>
+            <div class="stats">
 
-<div class="stats">
+                <div>
+                    <strong>0</strong>
+                    <span>Goals</span>
+                </div>
 
-<span>
+                <div>
+                    <strong>0</strong>
+                    <span>Assists</span>
+                </div>
 
-<strong>0</strong>
+            </div>
 
-<small>Goals</small>
+            <div class="click-text">
+                CLICK TO VIEW PROFILE
+            </div>
 
-</span>
+        </div>
 
-<span>
 
-<strong>0</strong>
+        <!-- SEFAT -->
 
-<small>Assists</small>
+        <div class="player-card" onclick="openSefatProfile()">
 
-</span>
+            <img src="IMG-20260601-WA0000.jpg"
+                 alt="Sefat">
 
-</div>
+            <div class="jersey">Jersey #10</div>
 
-<div class="click-text">
-CLICK TO VIEW PROFILE
-</div>
+            <h3>Sefat</h3>
 
-</div>
+            <div class="position">
+                Football Player
+            </div>
 
+            <div class="stats">
 
-<!-- PLAYER 2 - JOY -->
+                <div>
+                    <strong>0</strong>
+                    <span>Goals</span>
+                </div>
 
-<div class="player" onclick="openJoyProfile()">
+                <div>
+                    <strong>0</strong>
+                    <span>Assists</span>
+                </div>
 
-<img
-src="1791035624550.jpg"
-alt="Joy"
-class="player-photo"
->
+            </div>
 
-<div class="player-number">
-11
-</div>
+            <div class="click-text">
+                CLICK TO VIEW PROFILE
+            </div>
 
-<h3>
-Joy
-</h3>
+        </div>
 
-<p>
-Football Player
-</p>
 
-<div class="stats">
+        <!-- JOY -->
 
-<span>
+        <div class="player-card" onclick="openJoyProfile()">
 
-<strong>0</strong>
+            <img src="1791035624550.jpg"
+                 alt="Joy">
 
-<small>Goals</small>
+            <div class="jersey">Jersey #11</div>
 
-</span>
+            <h3>Joy</h3>
 
-<span>
+            <div class="position">
+                Football Player
+            </div>
 
-<strong>0</strong>
+            <div class="stats">
 
-<small>Assists</small>
+                <div>
+                    <strong>0</strong>
+                    <span>Goals</span>
+                </div>
 
-</span>
+                <div>
+                    <strong>0</strong>
+                    <span>Assists</span>
+                </div>
 
-</div>
+            </div>
 
-<div class="click-text">
-CLICK TO VIEW PROFILE
-</div>
+            <div class="click-text">
+                CLICK TO VIEW PROFILE
+            </div>
 
-</div>
+        </div>
 
 
-<!-- PLAYER 3 - SEIAM -->
+        <!-- SEIAM -->
 
-<div class="player" onclick="openSeiamProfile()">
+        <div class="player-card" onclick="openSeiamProfile()">
 
-<img
-src="Gemini_Generated_Image_ji51znji51znji51.jpeg"
-alt="Seiam"
-class="player-photo"
->
+            <img src="Gemini_Generated_Image_ji51znji51znji51.jpeg"
+                 alt="Seiam">
 
-<div class="player-number">
-06
-</div>
+            <div class="jersey">Jersey #06</div>
 
-<h3>
-Seiam
-</h3>
+            <h3>Seiam</h3>
 
-<p>
-Football Player
-</p>
+            <div class="position">
+                Football Player
+            </div>
 
-<div class="stats">
+            <div class="stats">
 
-<span>
+                <div>
+                    <strong>0</strong>
+                    <span>Goals</span>
+                </div>
 
-<strong>0</strong>
+                <div>
+                    <strong>0</strong>
+                    <span>Assists</span>
+                </div>
 
-<small>Goals</small>
+            </div>
 
-</span>
+            <div class="click-text">
+                CLICK TO VIEW PROFILE
+            </div>
 
-<span>
+        </div>
 
-<strong>0</strong>
 
-<small>Assists</small>
+        <!-- PLAYER 4 -->
 
-</span>
+        <div class="player-card">
 
-</div>
+            <div style="
+                width:145px;
+                height:145px;
+                border-radius:50%;
+                background:#e5edf5;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin:0 auto 12px;
+                font-size:55px;
+            ">
+                ⚽
+            </div>
 
-<div class="click-text">
-CLICK TO VIEW PROFILE
-</div>
+            <div class="jersey">Jersey #04</div>
 
-</div>
+            <h3>Player Name</h3>
 
+            <div class="position">
+                Football Player
+            </div>
 
-<!-- PLAYER 4 -->
+            <div class="stats">
 
-<div class="player">
+                <div>
+                    <strong>0</strong>
+                    <span>Goals</span>
+                </div>
 
-<div class="player-number">
-04
-</div>
+                <div>
+                    <strong>0</strong>
+                    <span>Assists</span>
+                </div>
 
-<h3>
-Player Name
-</h3>
+            </div>
 
-<p>
-Football Player
-</p>
+        </div>
 
-<div class="stats">
-
-<span>
-
-<strong>0</strong>
-
-<small>Goals</small>
-
-</span>
-
-<span>
-
-<strong>0</strong>
-
-<small>Assists</small>
-
-</span>
-
-</div>
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
@@ -751,25 +593,17 @@ Football Player
 
 <section>
 
-<h2 class="section-title">
-Upcoming Match
-</h2>
+    <h2 class="section-title">Upcoming Match</h2>
 
-<div class="match-box">
+    <div class="match-box">
 
-<h3>
-⚽ PLM Football Club
-</h3>
+        <h2>PLM FC 🆚 Opponent</h2>
 
-<p>
-Next Match Coming Soon
-</p>
+        <p style="margin-top:15px;">
+            Match details will be updated soon.
+        </p>
 
-<p>
-📍 Mohora Wasa Colony, Chattogram
-</p>
-
-</div>
+    </div>
 
 </section>
 
@@ -778,17 +612,13 @@ Next Match Coming Soon
 
 <section class="contact" id="contact">
 
-<h2 class="section-title">
-Contact PLM
-</h2>
+    <h2 class="section-title">Contact PLM</h2>
 
-<p>
-📍 Mohora Wasa Colony, Chattogram, Bangladesh
-</p>
+    <p>📍 Mohora Wasa Colony, Chattogram, Bangladesh</p>
 
-<p>
-⚽ PLM Football Club
-</p>
+    <p style="margin-top:10px;">
+        ⚽ PLM Football Club
+    </p>
 
 </section>
 
@@ -796,458 +626,359 @@ Contact PLM
 <!-- FOOTER -->
 
 <footer>
-
-<p>
-© 2026 PLM Football Club. All Rights Reserved.
-</p>
-
-<p>
-Passion • Unity • Football
-</p>
-
+    <p>© 2026 PLM Football Club. All Rights Reserved.</p>
 </footer>
+
+
+<!-- BIJOY PROFILE -->
+
+<div class="modal" id="bijoyModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeBijoyProfile()">×</span>
+
+        <img src="Gemini_Generated_Image_joc2zjoc2zjoc2zj.jpeg"
+             alt="Bijoy">
+
+        <h2>Bijoy</h2>
+
+        <p style="color:#777;margin-top:5px;">
+            Football Player
+        </p>
+
+        <div class="profile-info">
+
+            <p>
+                <strong>Full Name:</strong>
+                Jahid Hasan Bijoy
+            </p>
+
+            <p>
+                <strong>Age:</strong>
+                22
+            </p>
+
+            <p>
+                <strong>Position:</strong>
+                LWF
+            </p>
+
+            <p>
+                <strong>Jersey Number:</strong>
+                31
+            </p>
+
+            <p>
+                <strong>Goals:</strong>
+                0
+            </p>
+
+            <p>
+                <strong>Assists:</strong>
+                0
+            </p>
+
+            <p>
+                <strong>Achievement:</strong>
+                0
+            </p>
+
+            <p>
+                <strong>Trophies:</strong>
+                0
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 <!-- SEFAT PROFILE -->
 
-<div class="modal" id="profileModal">
+<div class="modal" id="sefatModal">
 
-<div class="profile">
+    <div class="modal-content">
 
-<span class="close" onclick="closeProfile()">
-×
-</span>
+        <span class="close" onclick="closeSefatProfile()">×</span>
 
-<div class="profile-top">
+        <img src="IMG-20260601-WA0000.jpg"
+             alt="Sefat">
 
-<img
-src="IMG-20260601-WA0000.jpg"
-alt="Ibna Sayed Sefat Ahmed"
-class="profile-photo"
->
+        <h2>Sefat</h2>
 
-<h2>
-Ibna Sayed Sefat Ahmed
-</h2>
+        <p style="color:#777;margin-top:5px;">
+            Football Player
+        </p>
 
-<p>
-PLM Football Club • Player #10
-</p>
+        <div class="profile-info">
 
-</div>
+            <p>
+                <strong>Full Name:</strong>
+                Ibna Sayed Sefat Ahmed
+            </p>
 
+            <p>
+                <strong>Age:</strong>
+                17
+            </p>
 
-<div class="profile-info">
+            <p>
+                <strong>Position:</strong>
+                DMF
+            </p>
 
-<div class="info-row">
+            <p>
+                <strong>Jersey Number:</strong>
+                10
+            </p>
 
-<span class="info-label">
-Full Name
-</span>
+            <p>
+                <strong>Goals:</strong>
+                0
+            </p>
 
-<span class="info-value">
-Ibna Sayed Sefat Ahmed
-</span>
+            <p>
+                <strong>Assists:</strong>
+                0
+            </p>
 
-</div>
+            <p>
+                <strong>Achievement:</strong>
+                1× Top Goal Scorer
+            </p>
 
-<div class="info-row">
+            <p>
+                <strong>Trophies:</strong>
+                0
+            </p>
 
-<span class="info-label">
-Jersey Number
-</span>
+        </div>
 
-<span class="info-value">
-#10
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Age
-</span>
-
-<span class="info-value">
-17
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Position
-</span>
-
-<span class="info-value">
-DMF
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Achievement
-</span>
-
-<span class="info-value">
-1× Top Goal Scorer
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Trophies
-</span>
-
-<span class="info-value">
-0
-</span>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 
 <!-- JOY PROFILE -->
 
-<div class="modal" id="joyProfileModal">
+<div class="modal" id="joyModal">
 
-<div class="profile">
+    <div class="modal-content">
 
-<span class="close" onclick="closeJoyProfile()">
-×
-</span>
+        <span class="close" onclick="closeJoyProfile()">×</span>
 
-<div class="profile-top">
+        <img src="1791035624550.jpg"
+             alt="Joy">
 
-<img
-src="1791035624550.jpg"
-alt="Rashedul Alam Joy"
-class="profile-photo"
->
+        <h2>Joy</h2>
 
-<h2>
-Rashedul Alam Joy
-</h2>
+        <p style="color:#777;margin-top:5px;">
+            Football Player
+        </p>
 
-<p>
-PLM Football Club • Player #11
-</p>
+        <div class="profile-info">
 
-</div>
+            <p>
+                <strong>Full Name:</strong>
+                Rashedul Alam Joy
+            </p>
 
+            <p>
+                <strong>Age:</strong>
+                28
+            </p>
 
-<div class="profile-info">
+            <p>
+                <strong>Position:</strong>
+                AMF
+            </p>
 
-<div class="info-row">
+            <p>
+                <strong>Jersey Number:</strong>
+                11
+            </p>
 
-<span class="info-label">
-Full Name
-</span>
+            <p>
+                <strong>Goals:</strong>
+                0
+            </p>
 
-<span class="info-value">
-Rashedul Alam Joy
-</span>
+            <p>
+                <strong>Assists:</strong>
+                0
+            </p>
 
-</div>
+            <p>
+                <strong>Achievement:</strong>
+                0
+            </p>
 
-<div class="info-row">
+            <p>
+                <strong>Trophies:</strong>
+                0
+            </p>
 
-<span class="info-label">
-Jersey Number
-</span>
+        </div>
 
-<span class="info-value">
-#11
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Age
-</span>
-
-<span class="info-value">
-28
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Position
-</span>
-
-<span class="info-value">
-AMF
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Achievement
-</span>
-
-<span class="info-value">
-0
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Trophies
-</span>
-
-<span class="info-value">
-0
-</span>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 
 <!-- SEIAM PROFILE -->
 
-<div class="modal" id="seiamProfileModal">
+<div class="modal" id="seiamModal">
 
-<div class="profile">
+    <div class="modal-content">
 
-<span class="close" onclick="closeSeiamProfile()">
-×
-</span>
+        <span class="close" onclick="closeSeiamProfile()">×</span>
 
-<div class="profile-top">
+        <img src="Gemini_Generated_Image_ji51znji51znji51.jpeg"
+             alt="Seiam">
 
-<img
-src="Gemini_Generated_Image_ji51znji51znji51.jpeg"
-alt="Seiam Ahmed"
-class="profile-photo"
->
+        <h2>Seiam</h2>
 
-<h2>
-Seiam Ahmed
-</h2>
+        <p style="color:#777;margin-top:5px;">
+            Football Player
+        </p>
 
-<p>
-PLM Football Club • Player #06
-</p>
+        <div class="profile-info">
 
-</div>
+            <p>
+                <strong>Full Name:</strong>
+                Seiam Ahmed
+            </p>
 
+            <p>
+                <strong>Age:</strong>
+                22
+            </p>
 
-<div class="profile-info">
+            <p>
+                <strong>Position:</strong>
+                CB
+            </p>
 
-<div class="info-row">
+            <p>
+                <strong>Jersey Number:</strong>
+                06
+            </p>
 
-<span class="info-label">
-Full Name
-</span>
+            <p>
+                <strong>Goals:</strong>
+                0
+            </p>
 
-<span class="info-value">
-Seiam Ahmed
-</span>
+            <p>
+                <strong>Assists:</strong>
+                0
+            </p>
 
-</div>
+            <p>
+                <strong>Achievement:</strong>
+                0
+            </p>
 
-<div class="info-row">
+            <p>
+                <strong>Trophies:</strong>
+                0
+            </p>
 
-<span class="info-label">
-Jersey Number
-</span>
+        </div>
 
-<span class="info-value">
-#06
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Age
-</span>
-
-<span class="info-value">
-22
-</span>
+    </div>
 
 </div>
 
-<div class="info-row">
-
-<span class="info-label">
-Position
-</span>
-
-<span class="info-value">
-CB
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Achievement
-</span>
-
-<span class="info-value">
-0
-</span>
-
-</div>
-
-<div class="info-row">
-
-<span class="info-label">
-Trophies
-</span>
-
-<span class="info-value">
-0
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- JAVASCRIPT -->
 
 <script>
 
-/* SEFAT */
+/* BIJOY */
 
-function openProfile(){
-
-document.getElementById("profileModal").style.display="block";
-
-document.body.style.overflow="hidden";
-
+function openBijoyProfile(){
+    document.getElementById("bijoyModal").style.display="flex";
 }
 
-function closeProfile(){
+function closeBijoyProfile(){
+    document.getElementById("bijoyModal").style.display="none";
+}
 
-document.getElementById("profileModal").style.display="none";
 
-document.body.style.overflow="auto";
+/* SEFAT */
 
+function openSefatProfile(){
+    document.getElementById("sefatModal").style.display="flex";
+}
+
+function closeSefatProfile(){
+    document.getElementById("sefatModal").style.display="none";
 }
 
 
 /* JOY */
 
 function openJoyProfile(){
-
-document.getElementById("joyProfileModal").style.display="block";
-
-document.body.style.overflow="hidden";
-
+    document.getElementById("joyModal").style.display="flex";
 }
 
 function closeJoyProfile(){
-
-document.getElementById("joyProfileModal").style.display="none";
-
-document.body.style.overflow="auto";
-
+    document.getElementById("joyModal").style.display="none";
 }
 
 
 /* SEIAM */
 
 function openSeiamProfile(){
-
-document.getElementById("seiamProfileModal").style.display="block";
-
-document.body.style.overflow="hidden";
-
+    document.getElementById("seiamModal").style.display="flex";
 }
 
 function closeSeiamProfile(){
-
-document.getElementById("seiamProfileModal").style.display="none";
-
-document.body.style.overflow="auto";
-
+    document.getElementById("seiamModal").style.display="none";
 }
 
 
-/* CLICK OUTSIDE PROFILE */
+/* CLICK OUTSIDE MODAL */
 
 window.onclick=function(event){
 
-let sefatModal=document.getElementById("profileModal");
+    if(event.target === document.getElementById("bijoyModal")){
+        closeBijoyProfile();
+    }
 
-let joyModal=document.getElementById("joyProfileModal");
+    if(event.target === document.getElementById("sefatModal")){
+        closeSefatProfile();
+    }
 
-let seiamModal=document.getElementById("seiamProfileModal");
+    if(event.target === document.getElementById("joyModal")){
+        closeJoyProfile();
+    }
 
-
-if(event.target === sefatModal){
-
-closeProfile();
-
-}
-
-if(event.target === joyModal){
-
-closeJoyProfile();
-
-}
-
-if(event.target === seiamModal){
-
-closeSeiamProfile();
-
-}
+    if(event.target === document.getElementById("seiamModal")){
+        closeSeiamProfile();
+    }
 
 };
 
 
-/* ESC KEY */
+/* ESCAPE KEY */
 
 document.addEventListener("keydown",function(event){
 
-if(event.key==="Escape"){
+    if(event.key==="Escape"){
 
-closeProfile();
-closeJoyProfile();
-closeSeiamProfile();
+        closeBijoyProfile();
+        closeSefatProfile();
+        closeJoyProfile();
+        closeSeiamProfile();
 
-}
+    }
 
 });
 
 </script>
 
-
 </body>
-
 </html>
