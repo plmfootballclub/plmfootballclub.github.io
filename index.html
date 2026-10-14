@@ -612,6 +612,20 @@ footer{
     <div class="click-text">CLICK TO VIEW PROFILE</div>
 </div>
 
+        
+<!-- MAHIB - LAST PLAYER -->
+<div class="player-card" onclick="openProfile('mahibModal')">
+    <img src="mahib.jpg" alt="Mahib">
+    <div class="jersey">Jersey #23</div>
+    <h3>Mahib</h3>
+    <div class="position">Football Player</div>
+    <div class="stats">
+        <div><strong>0</strong><span>Goals</span></div>
+        <div><strong>2</strong><span>Assists</span></div>
+    </div>
+    <div class="click-text">CLICK TO VIEW PROFILE</div>
+</div>
+
 
     </div>
 </section>
@@ -980,7 +994,28 @@ footer{
         </div>
     </div>
 </div>
- 
+
+    
+<!-- MAHIB PROFILE - LAST -->
+<div class="modal" id="mahibModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProfile('mahibModal')">×</span>
+        <img src="mahib.jpg" alt="Mahib">
+        <h2>Mahib Ahmed</h2>
+        <p style="color:#777;margin-top:5px;">Football Player</p>
+
+        <div class="profile-info">
+            <p><strong>Full Name:</strong> Mahib Ahmed</p>
+            <p><strong>Age:</strong> 14</p>
+            <p><strong>Jersey Number:</strong> 23</p>
+            <p><strong>Position:</strong> GK</p>
+            <p><strong>Matches Played:</strong> 4</p>
+            <p><strong>Achievement:</strong> 0</p>
+            <p><strong>Trophies:</strong> 0</p>
+        </div>
+    </div>
+</div>
+
 
 <script>
 function openProfile(id){
